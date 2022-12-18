@@ -12,14 +12,14 @@ export const TopMenu = () => {
             {
                 type: "linkProfile",
                 title: "This Month",
-                image: "./assets/profileimage.png"
+                image: "/assets/profileimage.png"
             },
         ]
 
     return (<>
         <div className="banner">
             <div data-testid="navbar" className="navbar">
-                <img src="./assets/nxtwavelogo.png" className="logo desktop-menu"  alt="logo" />
+                <img src={process.env.PUBLIC_URL + "/assets/nxtwavelogo.png"} className="logo desktop-menu"  alt="logo" />
                 <ul className="desktop-menu" >
                     {
                         menudata.map((item, index) => <NavBar key={index} item={item} index={index} />)

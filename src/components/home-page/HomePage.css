@@ -1,5 +1,6 @@
   .home-page-container{
     background: #F5F5F5;
+    min-height: 580px;
   }
   nav {
     height: 56px;
@@ -174,5 +175,10 @@
     width: 50%;
     padding: 0px;
     justify-content: center;
+  }
+  .no-records-banner {
+    width: 50%;
+    text-align: center;
+    margin: auto;
   }
 }

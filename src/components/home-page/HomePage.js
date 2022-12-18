@@ -13,7 +13,7 @@ function HomePage() {
   const getData = async () => {
     const { data } = await resourceService.getAllResources();
     if (searchWord !== "") {
-      const filterData = resources.filter((obj) => obj.title.includes(searchWord));
+      const filterData = resources.filter((obj) => obj.title.toLocaleLowerCase().includes(searchWord.toLocaleLowerCase()));
       setResources(filterData);
       return;
     }

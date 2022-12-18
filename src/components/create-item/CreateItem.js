@@ -145,7 +145,7 @@ export class CreateItem extends Component {
         return (
             <>
                 <span className='go-back-user'>
-                    <NavLink to="/users" className={({ isActive }) => (isActive ? "link-active" : "link")} > <img src="./assets/chevron-left-solid.svg" className="left-arrow"  alt="logo" /> Users</NavLink>
+                    <NavLink to="/users" className={({ isActive }) => (isActive ? "link-active" : "link")} > <img src={process.env.PUBLIC_URL + "/assets/chevron-left-solid.svg"} className="left-arrow"  alt="logo" /> Users</NavLink>
                 </span>
                 <div className="add-form-container">
                     <form className="add-form" onSubmit={this.onFormSubmit} noValidate>
@@ -188,7 +188,7 @@ export class CreateItem extends Component {
                         </div>
                     </form>
                     <div className="add-form-bg"> 
-                        <img src="./assets/addformimage.png" className="add-res-image"  alt="logo" />
+                        <img src={process.env.PUBLIC_URL + "/assets/addformimage.png"} className="add-res-image"  alt="logo" />
                     </div>
                     <ToastContainer />
                 </div>

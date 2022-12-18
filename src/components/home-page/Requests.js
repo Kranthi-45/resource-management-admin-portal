@@ -25,9 +25,18 @@ const Requests = (props) => {
            }
           </div>
         </div>
-        <ReactPaginate previousLabel={"Prev"} nextLabel={"Next"} pageCount={totalPages} onPageChange={changePage} containerClassName={"navigationButtons"}
-          previousLinkClassName={"previousButton"} nextLinkClassName={"nextButton"} disabledClassName={"navigationDisabled"}activeClassName={"navigationActive"}/>
-    </div>
+        {
+          !props.dataRecords.length && (
+            <div className="alert alert-danger"style= { { width: 1000, textAlign: "center", margin:"auto"}} ><strong>No records Found</strong></div>
+          )
+        }
+        {
+          !props.dataRecords.length || (
+            <ReactPaginate previousLabel={"Prev"} nextLabel={"Next"} pageCount={totalPages} onPageChange={changePage} containerClassName={"navigationButtons"}
+            previousLinkClassName={"previousButton"} nextLinkClassName={"nextButton"} disabledClassName={"navigationDisabled"}activeClassName={"navigationActive"}/>
+          )
+        }
+      </div>
     );
   };
   export {Requests}
